@@ -1,17 +1,28 @@
 Playing for Data
 ===============================================================================
+This source code release accompanies the paper 
+Stephan Richter, Vibhav Vineet, Stefan Roth and Vladlen Koltun.
+Playing for Data: Ground Truth from Computer Games. In ECCV 2016.
+
+https://download.visinf.tu-darmstadt.de/data/from_games/index.html
+
+
+License
+-------------------------------------------------------------------------------
+This code is released under the MIT license, see LICENSE.md for full text as well as 3rd party library acknowledgements.
 
 Requirements:
-- CMake (for making OpenEXR and zlib)
-- Visual Studio (for compiling renderdoc) - tested on VS 2013
-- Python - tested with Anaconda
-- MATLAB (for annotating frames) - tested on ML 2013a
+-------------------------------------------------------------------------------
+* CMake (for making OpenEXR and zlib)
+* Visual Studio (for compiling renderdoc) - tested on VS 2013
+* Python - tested with Anaconda
+* MATLAB (for annotating frames) - tested on ML 2013a
 
 
 Let <PFD_DIR> be the Playing for Data directory with the following structure:
-	- renderdoc  | Graphic Debugger - dump frames to disk
-	- scripts    | Python scripts for extracting data from games using renderdoc
-	- README.md  | this file.
+	* renderdoc  | Graphic Debugger - dump frames to disk
+	* scripts    | Python scripts for extracting data from games using renderdoc
+	* README.md  | this file.
 
 
 Preparation (OpenEXR):
@@ -69,13 +80,13 @@ Setup for processing frames (automated):
 renderdoc saves UI settings in %APPDATA%/renderdoc/UI.config. 
 If it does not exist, run renderdoc once and close it again.
 Open the file and eit the following values:
-- Point LoadScriptFile to the script you want to run for each capture file.
-- Set ExecuteScriptOnLoad to true. This will load the script you specified above
+* Point LoadScriptFile to the script you want to run for each capture file.
+* Set ExecuteScriptOnLoad to true. This will load the script you specified above
   and execute it right after a capture file has been loaded.
-- You can start renderdoc from the comand line: renderdocui.exe <path to capture file>
-- To close renderdoc after processing is done, add 'renderdoc.AppWindow.Close()' to your script
+* You can start renderdoc from the comand line: renderdocui.exe <path to capture file>
+* To close renderdoc after processing is done, add 'renderdoc.AppWindow.Close()' to your script
 
 
 Annotating the data
 -------------------------------------------------------------------------------
-- Coming soon.
+* Coming soon.
