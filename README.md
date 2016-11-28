@@ -10,8 +10,7 @@ Requirements:
 
 Let <PFD_DIR> be the Playing for Data directory with the following structure:
 	- renderdoc  | Graphic Debugger - dump frames to disk
-	- extract    | scripts for extracting MTS, etc. from dumped frames
-	- label      | scripts for annotating MTS
+	- scripts    | Python scripts for extracting data from games using renderdoc
 	- README.md  | this file.
 
 
@@ -20,14 +19,17 @@ Preparation (OpenEXR):
 1. Use CMake to build zlib <PFD_DIR>/renderdoc/renderdoc/3rdparty/zlib
 2. Use CMake to build IlmBase (located at <PFD_DIR>/renderdoc/renderdoc/3rdparty/openexr/IlmBase)
    Disable the NAMESPACE_VERSIONING option.
-3. Compile IlmBase
+   Set CMAKE_INSTALL_PREFIX to your preferred directory.   
+3. Compile IlmBase by building the INSTALL target.
 4. Use CMake to build OpenEXR (located at <PFD_DIR>/renderdoc/renderdoc/3rdparty/openexr/OpenEXR)
-   Make sure that ILMBASE_PACKAGE_PREFIX in CMake is set to the install directory of IlmBase. 
-   In Windows, building the INSTALL project in your IlmBase solution should install it to C:/Program Files/ilmbase
+   Make sure that ILMBASE_PACKAGE_PREFIX in CMake is set to the install directory of IlmBase 
+   (the one you specified as CMAKE_INSTALL_PREFIX in the 2nd step). 
    Disable the NAMESPACE_VERSIONING option.
-5. Compile OpenEXR. Make sure that the ilmbase libraries (Half, IlmThread) are on your library search path, 
-   otherwise compiling the IlmImf project may fail with some cryptic error ("cmd.exe" exited with code -1073741515).
-
+   If you built zlib in a separate build directory, copy the zconf.h from that directory to the ZLIB_INCLUDE_DIR
+5. Compile OpenEXR. Make sure that the ilmbase libraries (Half, IlmThread) are on your library search path 
+   (for setting the path under windows see Preparation 2. below), 
+   otherwise compiling the IlmImf project may fail with some cryptic error (Visual Studio returns '"cmd.exe" exited with code -1073741515').
+   
 
 Preparation (renderdoc):
 -------------------------------------------------------------------------------
