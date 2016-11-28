@@ -1,8 +1,11 @@
 Playing for Data
 ===============================================================================
-This source code release accompanies the paper 
-Stephan Richter, Vibhav Vineet, Stefan Roth and Vladlen Koltun.
-Playing for Data: Ground Truth from Computer Games. In ECCV 2016.
+
+This source code release accompanies the paper  
+
+**Playing for Data: Ground Truth from Computer Games**  
+Stephan Richter, Vibhav Vineet, Stefan Roth and Vladlen Koltun. In ECCV 2016.  
+
 
 Website
 -------------------------------------------------------------------------------
@@ -22,6 +25,7 @@ Requirements:
 
 
 Let <PFD_DIR> be the Playing for Data directory with the following structure:
+
 * renderdoc  | Graphic Debugger - dump frames to disk
 * scripts    | Python scripts for extracting data from games using renderdoc
 * README.md  | this file.
@@ -82,6 +86,7 @@ Setup for processing frames (automated):
 renderdoc saves UI settings in %APPDATA%/renderdoc/UI.config. 
 If it does not exist, run renderdoc once and close it again.
 Open the file and eit the following values:
+
 * Point LoadScriptFile to the script you want to run for each capture file.
 * Set ExecuteScriptOnLoad to true. This will load the script you specified above
   and execute it right after a capture file has been loaded.
