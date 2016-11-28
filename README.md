@@ -4,6 +4,8 @@ This source code release accompanies the paper
 Stephan Richter, Vibhav Vineet, Stefan Roth and Vladlen Koltun.
 Playing for Data: Ground Truth from Computer Games. In ECCV 2016.
 
+Website
+-------------------------------------------------------------------------------
 https://download.visinf.tu-darmstadt.de/data/from_games/index.html
 
 
@@ -20,9 +22,9 @@ Requirements:
 
 
 Let <PFD_DIR> be the Playing for Data directory with the following structure:
-	* renderdoc  | Graphic Debugger - dump frames to disk
-	* scripts    | Python scripts for extracting data from games using renderdoc
-	* README.md  | this file.
+* renderdoc  | Graphic Debugger - dump frames to disk
+* scripts    | Python scripts for extracting data from games using renderdoc
+* README.md  | this file.
 
 
 Preparation (OpenEXR):
@@ -89,4 +91,4 @@ Open the file and eit the following values:
 
 Annotating the data
 -------------------------------------------------------------------------------
-* Coming soon.
+Coming soon.
