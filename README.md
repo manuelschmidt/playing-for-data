@@ -50,6 +50,17 @@ Preparation (OpenEXR):
    otherwise compiling the IlmImf project may fail with some cryptic error (Visual Studio returns `"cmd.exe" exited with code -1073741515`).
    
 
+Disclaimer (Before building renderdoc)
+-------------------------------------------------------------------------------
+The renderdoc version used here is our modification of an now outdated version of renderdoc.
+renderdoc evolves, but we do not integrate these changes into our version.
+
+* We added functions that are not available in plain renderdoc. Running our scripts against a version from the regular renderdoc repository will not work.
+* Bugs you find in our version should not be reported to the official renderdoc repository as they may have been fixed already. (except they also occur in the regular renderdoc version independent of using our code).
+* Do not ask for help in capturing commercial games on the renderdoc forums.
+* If you need features from more recent renderdoc releases, you will need to modify renderdoc on your own.
+
+
 Preparation (renderdoc):
 -------------------------------------------------------------------------------
 1. Compile the complete *renderdoc* solution.
